@@ -37,7 +37,7 @@ public class MinTest
    public void testForNullElement()
    {
      // queremos probar que haya mas leementos en la lista pero que si hay alguno que sea null  nos da el fallo
-     // list.add (null);
+      list.add (null);
       list.add ("cat"); // preparamos el test
       Min.min (list); // aqui realizamos el test
    }
