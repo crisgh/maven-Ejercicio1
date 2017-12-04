@@ -71,9 +71,9 @@ public class MinTest
    @Test
    public void testSingleElement()
    {
-	   list.add ("cat");
-	   Object obj = Min.min (list);
-	   assertFalse ("Single Element List", obj.equals ("cat")); // assertTrue -- funciona
+      list.add ("cat");
+      Object obj = Min.min (list);
+      assertTrue ("Single Element List", obj.equals ("cat"));
    }
 
    @Test
@@ -85,3 +85,4 @@ public class MinTest
       assertTrue ("Double Element List", obj.equals ("cat"));
    }
 }
+
