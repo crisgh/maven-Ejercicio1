@@ -60,20 +60,20 @@ public class MinTest
                       // No deberia compilar.. pero los genericos solo comprueban los datos en tiempo de compilacion por tanto al ser ejecutado si nos lo permiten
       Min.min (list); // En tiempo de ejecucion nos da el fallo de que estamos comparando tipos que no con comparable (int con los strings )
    }
-//   @Test (expected = IllegalArgumentException.class)
-//   public void testEmptyList()
-//   {
-//      Min.min (list);
-//   }
+   @Test (expected = IllegalArgumentException.class)
+   public void testEmptyList()
+   {
+      Min.min (list);
+   }
 
    // HAPPY PATH -- Situaciones que sabemos lo que va a salir
 
    @Test
    public void testSingleElement()
    {
-      list.add ("cat");
-      Object obj = Min.min (list);
-      assertTrue ("Single Element List", obj.equals ("cat"));
+	   list.add ("cat");
+	   Object obj = Min.min (list);
+	   assertFalse ("Single Element List", obj.equals ("cat")); // assertTrue -- funciona
    }
 
    @Test
